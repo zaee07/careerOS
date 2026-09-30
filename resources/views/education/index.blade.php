@@ -9,7 +9,11 @@
             <a
                 href="{{ route('educations.create') }}"
                 class="rounded-md bg-gray-800 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-700">
+<<<<<<< HEAD
                 + Add Education
+=======
+                + Add Educations
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
             </a>
         </div>
     </x-slot>
@@ -71,14 +75,22 @@
                         <div class="flex gap-2">
 
                             <a
+<<<<<<< HEAD
                                 href="{{ route('education.edit', $education) }}"
+=======
+                                href="{{ route('educations.edit', $education) }}"
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                                 class="text-sm text-indigo-600 hover:text-indigo-800">
                                 Edit
                             </a>
 
                             <form
                                 method="POST"
+<<<<<<< HEAD
                                 action="{{ route('education.destroy', $education) }}">
+=======
+                                action="{{ route('educations.destroy', $education) }}">
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                                 @csrf
                                 @method('DELETE')
 
@@ -97,7 +109,11 @@
                     <div class="mt-4 text-sm text-gray-600">
 
                         <span>
+<<<<<<< HEAD
                             {{ $education->start_year->format('M Y') }}
+=======
+                            {{ $education->start_year }}
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                         </span>
 
                         <span> — </span>
@@ -108,7 +124,11 @@
                         </span>
                         @elseif ($education->end_year)
                         <span>
+<<<<<<< HEAD
                             {{ $education->end_year->format('M Y') }}
+=======
+                            {{ $education->end_year }}
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                         </span>
                         @endif
 

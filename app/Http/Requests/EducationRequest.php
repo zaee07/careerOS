@@ -37,12 +37,24 @@ class EducationRequest extends FormRequest
 
             'start_year' => [
                 'required',
+<<<<<<< HEAD
                 'year',
+=======
+                'integer',
+                'digits:4',
+                'between:1900,' . date('Y'),
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
             ],
 
             'end_year' => [
                 'nullable',
+<<<<<<< HEAD
                 'year',
+=======
+                'integer',
+                'digits:4',
+                'between:1900,' . date('Y'),
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                 'after_or_equal:start_year',
             ],
 

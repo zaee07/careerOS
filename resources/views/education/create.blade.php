@@ -2,7 +2,11 @@
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+<<<<<<< HEAD
             Add Experience
+=======
+            Add Education
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
         </h2>
     </x-slot>
 
@@ -11,6 +15,7 @@
 
             <div class="bg-white shadow-sm sm:rounded-lg p-6">
 
+<<<<<<< HEAD
                 <form method="POST" action="{{ route('experiences.store') }}">
                     @csrf
 
@@ -27,6 +32,12 @@
                             Cancel
                         </a>
                     </div>
+=======
+                <form method="POST" action="{{ route('educations.store') }}">
+                    @csrf
+
+                    @include('education.form')
+>>>>>>> 0150c17 (feat: education, piks profile, update controller)
                 </form>
 
             </div>
