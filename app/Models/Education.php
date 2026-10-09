@@ -23,13 +23,8 @@ class Education extends Model
     protected function casts(): array
     {
         return [
-<<<<<<< HEAD
-            'start_year' => 'year',
-            'end_year' => 'year',
-=======
-            'start_year' => 'integer', 
+            'start_year' => 'integer',
             'end_year'   => 'integer',
->>>>>>> 0150c17 (feat: education, piks profile, update controller)
             'is_current' => 'boolean',
         ];
     }

@@ -20,13 +20,8 @@ return new class extends Migration
             $table->string('location')->nullable();
             $table->string('field_of_study')->nullable();
 
-<<<<<<< HEAD
-            $table->date('start_year');
-            $table->date('end_year')->nullable();
-=======
             $table->year('start_year');
             $table->year('end_year')->nullable();
->>>>>>> 0150c17 (feat: education, piks profile, update controller)
 
             $table->boolean('is_current')->default(false);
 

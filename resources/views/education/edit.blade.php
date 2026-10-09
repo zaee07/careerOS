@@ -13,19 +13,11 @@
 
                 <form
                     method="POST"
-<<<<<<< HEAD
-                    action="{{ route('experiences.update', $experience) }}">
-                    @csrf
-                    @method('PUT')
-
-                    @include('experiences.form')
-=======
                     action="{{ route('educations.update', $education) }}">
                     @csrf
                     @method('PUT')
 
                     @include('education.form')
->>>>>>> 0150c17 (feat: education, piks profile, update controller)
 
                 </form>
 

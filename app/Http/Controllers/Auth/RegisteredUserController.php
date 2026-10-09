@@ -8,10 +8,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\DB;
->>>>>>> 0150c17 (feat: education, piks profile, update controller)
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
@@ -36,17 +33,9 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-<<<<<<< HEAD
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-=======
         $user = DB::transaction(function () use ($request) {
             $user = User::create([
                 'name' => $request->name,
@@ -59,7 +48,6 @@ class RegisteredUserController extends Controller
             ]);
             return $user;
         });
->>>>>>> 0150c17 (feat: education, piks profile, update controller)
 
         event(new Registered($user));
 
