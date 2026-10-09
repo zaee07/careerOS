@@ -70,9 +70,6 @@ class EducationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
     public function update(
         EducationRequest $request,
         Education $education
@@ -94,9 +91,6 @@ class EducationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
     public function destroy(Education $education): RedirectResponse
     {
         abort_unless(
